@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" ng-app="">
+<head>
+	<meta charset="UTF-8">
+	<title>ngMadLibs</title>
+	<link rel="stylesheet" href="../lesson2/css/bootstrap.min.css">
+	<style>
+		.container { width: 60%; margin: 20px auto;}
+		input { margin: 10px; }
+		img { margin-right: 50px; }
+		span { text-decoration: underline; font-weight: bold; }
+		header,section { border: 3px solid #000; padding: 20px;  ng-model="malename" ng-init="malename='male name'"}
+		header { padding: 0; }
+		.pull-left { border: 2px solid #000; }
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+
+		<header class="clearfix">
+			<img class="pull-left" src="../lesson2/img/mad-lib-happy-face.png" alt="Happy Face">
+			<div class="pull-right">
+				<img src="../lesson2/img/ng-mad-libs-logo.png" alt="Mad Libs Logo">
+				<h1>Automate This!</h1>
+			</div>
+		</header>
+
+		<section>
+			<h3>Provide the following words:</h3>
+			<input type="text" placeholder="Male Name" ng-model="malename" ng-init="malename='male name'">
+			<input type="text" placeholder="Job Title" ng-model="jobtitle" ng-init="jobtitle='job title'">
+			<input type="text" placeholder="Tedious Task" ng-model="tedioustask" ng-init="tedioustask='tedious task'">
+			<input type="text" placeholder="Dirty Task" ng-model="dirtytask" ng-init="dirtytask='dirty task'">
+			<input type="text" placeholder="Celebrity" ng-model="celebrity" ng-init="celebrity='celebrity'">	
+			<input type="text" placeholder="Useless Skill" ng-model="uselessskill" ng-init="uselessskill='useless skill'">
+			<input type="text" placeholder="Obnoxious Celebrity" ng-model="obnoxiouscelebrity" ng-init="obnoxiouscelebrity='obnoxious celebrity'">
+			<input type="text" placeholder="Huge Number" ng-model="hugenumber" ng-init="hugenumber='huge number'">
+			<input type="text" placeholder="Adjective" ng-model="adjective" ng-init="adjective='adjective'">
+		</section>
+
+		<section>
+			<p class="lead">
+				<span>{{malename}}</span> was a <span>{{jobtitle}}</span> who loved technology. Although he loved parts of his job, he absolutely hated <span>{{tedioustask}}</span> and <span>{{dirtytask}}</span>. So, <span>{{malename}}</span> met with his life mentor <span>{{celebrity}}</span> who told him to learn how to learn <span>{{uselessskill}}</span> with Thinkful. Thinkful didnt offer a course on <span>{{uselessskill}}</span> so he studied programming instead.
+			</p>
+			<p class="lead">
+				What a great decision! With his new skills, <span>{{malename}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnoxiouscelebrity}}</span> that not only loved <span>{{dirtytask}}</span> but did it <span>{{hugenumber}}</span> faster.
+			</p>
+		</section>
+
+	</div>
+
+	<script src="../lesson2/js/angular.min.js"></script>
+</body>
+</html>
