@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>ngMadLibs</title>
+	<link rel="stylesheet" href="../lesson3/css/bootstrap.min.css">
+	<style>
+		.container { width: 60%; margin: 20px auto;}
+		input { margin: 10px; }
+		img { margin-right: 50px; }
+		span { text-decoration: underline; font-weight: bold; }
+		header,section { border: 3px solid #000; padding: 20px;  ng-model="malename"}
+		header { padding: 0; }
+		.pull-left { border: 2px solid #000; }
+	</style>
+</head>
+<body>
+	
+	<div class="container" ng-controller="MyCtrl">
+
+		<header class="clearfix">
+			<img class="pull-left" src="../lesson2/img/mad-lib-happy-face.png" alt="Happy Face">
+			<div class="pull-right">
+				<img src="../lesson2/img/ng-mad-libs-logo.png" alt="Mad Libs Logo">
+				<h1>Automate This!</h1>
+			</div>
+		</header>
+
+		<section>
+			<h3>Provide the following words:</h3>
+			<input type="text" placeholder="Male Name" ng-model="madLibs.malename">
+			<input type="text" placeholder="Job Title" ng-model="madLibs.jobtitle">
+			<input type="text" placeholder="Tedious Task" ng-model="madLibs.tedioustask">
+			<input type="text" placeholder="Dirty Task" ng-model="madLibs.dirtytask">
+			<input type="text" placeholder="Celebrity" ng-model="madLibs.celebrity">	
+			<input type="text" placeholder="Useless Skill" ng-model="madLibs.uselessskill">
+			<input type="text" placeholder="Obnoxious Celebrity" ng-model="madLibs.obnoxiouscelebrity">
+			<input type="text" placeholder="Huge Number" ng-model="madLibs.hugenumber">
+			<input type="text" placeholder="Adjective" ng-model="madLibs.adjective">
+		</section>
+
+		<section>
+			<p class="lead">
+				<span>{{madLibs.malename}}</span> was a <span>{{madLibs.jobtitle}}</span> who loved technology. Although he loved parts of his job, he absolutely hated <span>{{madLibs.tedioustask}}</span> and <span>{{madLibs.dirtytask}}</span>. So, <span>{{madLibs.malename}}</span> met with his life mentor <span>{{madLibs.celebrity}}</span> who told him to learn how to learn <span>{{madLibs.uselessskill}}</span> with Thinkful. Thinkful didnt offer a course on <span>{{madLibs.uselessskill}}</span> so he studied programming instead.
+			</p>
+			<p class="lead">
+				What a great decision! With his new skills, <span>{{madLibs.malename}}</span> built a(n) <span>{{madLibs.adjective}}</span> robot named <span>{{madLibs.obnoxiouscelebrity}}</span> that not only loved <span>{{madLibs.dirtytask}}</span> but did it <span>{{madLibs.hugenumber}}</span> faster.
+			</p>
+		</section>
+
+	</div>
+
+	<script src="../lesson3/js/angular.min.js"></script>
+	<script src="../lesson3/js/add-a-controller.js"></script>
+</body>
+</html>
