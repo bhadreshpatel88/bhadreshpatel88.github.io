@@ -14,7 +14,7 @@
 		.pull-left { border: 2px solid #000; }
 	</style>
 </head>
-<body>
+<body class="mad-libs">
 	
 	<div class="container" ng-controller="MyCtrl">
 
@@ -27,6 +27,10 @@
 		</header>
 
 		<section>
+			<input type="radio" name="gender" ng-model="gender" value="male">Male
+			<input type="radio" name="gender" ng-model="gender" value="female">Female
+			<hr>
+			{{gender}}
 			<h3>Provide the following words:</h3>
 			<input type="text" placeholder="Male Name" ng-model="madLibs.malename">
 			<input type="text" placeholder="Job Title" ng-model="madLibs.jobtitle">
@@ -41,7 +45,7 @@
 
 		<section>
 			<p class="lead">
-				<span>{{madLibs.malename}}</span> was a <span>{{madLibs.jobtitle}}</span> who loved technology. Although he loved parts of his job, he absolutely hated <span>{{madLibs.tedioustask}}</span> and <span>{{madLibs.dirtytask}}</span>. So, <span>{{madLibs.malename}}</span> met with his life mentor <span>{{madLibs.celebrity}}</span> who told him to learn how to learn <span>{{madLibs.uselessskill}}</span> with Thinkful. Thinkful didnt offer a course on <span>{{madLibs.uselessskill}}</span> so he studied programming instead.
+				<span>{{madLibs.malename}}</span> was a <span>{{madLibs.jobtitle}}</span> who loved technology. Although {{he_she}} loved parts of  job, {{his_her}} absolutely hated <span>{{madLibs.tedioustask}}</span> and <span>{{madLibs.dirtytask}}</span>. So, <span>{{madLibs.malename}}</span> met with his life mentor <span>{{madLibs.celebrity}}</span> who told him to learn how to learn <span>{{madLibs.uselessskill}}</span> with Thinkful. Thinkful didnt offer a course on <span>{{madLibs.uselessskill}}</span> so he studied programming instead.
 			</p>
 			<p class="lead">
 				What a great decision! With his new skills, <span>{{madLibs.malename}}</span> built a(n) <span>{{madLibs.adjective}}</span> robot named <span>{{madLibs.obnoxiouscelebrity}}</span> that not only loved <span>{{madLibs.dirtytask}}</span> but did it <span>{{madLibs.hugenumber}}</span> faster.
