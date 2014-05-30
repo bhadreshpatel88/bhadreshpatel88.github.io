@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Countries Population Data</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+	<h1>Countries Population Data</h1>
+
+	<hr>		
+
+	<div ng-controller="oneController">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Country Name</th>
+					<th>1960 Population</th>
+					<th>1970 Population</th>
+					<th>1980 Population</th>
+					<th>1990 Population</th>
+					<th>2000 Population</th>
+					<th>2010 Population</th>
+					<th>% Growth</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="country in countries | orderBy:'name'">
+					<td>{{country.name}}</td>
+					<td>{{country.1960 | number}}</td>
+					<td>{{country.1970 | number}}</td>
+					<td>{{country.1980 | number}}</td>
+					<td>{{country.1990 | number}}</td>
+					<td>{{country.2000 | number}}</td>
+					<td>{{country.2010 | number}}</td>	
+					<td>{{(country.1960/country.2010)*100 | number}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+	<script src="js/countries-data.js"></script>
+</body>
+</html>

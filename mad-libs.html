@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Mad Libs</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="mad-libs">
+	
+	<div ng-controller="MyCtrl">
+
+		<header class="clearfix">
+			<img class="pull-left" src="img/mad-lib-happy-face.png" alt="Happy Face">
+			<div class="pull-right">
+				<img src="img/ng-mad-libs-logo.png" alt="Mad Libs Logo">
+				<h1>Automate This!</h1>
+			</div>
+		</header>
+
+		<section>
+			<input type="radio" name="gender" ng-model="gender" value="male"> Male
+			<input type="radio" name="gender" ng-model="gender" value="female"> Female
+			<hr>
+			<h3>Provide the following words:</h3>
+			<input type="text" placeholder="Male Name" ng-model="madLibs.malename">
+			<input type="text" placeholder="Job Title" ng-model="madLibs.jobtitle">
+			<input type="text" placeholder="Tedious Task" ng-model="madLibs.tedioustask">
+			<input type="text" placeholder="Dirty Task" ng-model="madLibs.dirtytask">
+			<input type="text" placeholder="Celebrity" ng-model="madLibs.celebrity">	
+			<input type="text" placeholder="Useless Skill" ng-model="madLibs.uselessskill">
+			<input type="text" placeholder="Obnoxious Celebrity" ng-model="madLibs.obnoxiouscelebrity">
+			<input type="text" placeholder="Huge Number" ng-model="madLibs.hugenumber">
+			<input type="text" placeholder="Adjective" ng-model="madLibs.adjective">
+		</section>
+
+		<section>
+			<p class="lead">
+				<span>{{madLibs.malename}}</span> was a <span>{{madLibs.jobtitle}}</span> who loved technology. Although {{he_she}} loved parts of  job, {{he_she}} absolutely hated <span>{{madLibs.tedioustask}}</span> and <span>{{madLibs.dirtytask}}</span>. So, <span>{{madLibs.malename}}</span> met with {{his_her}} life mentor <span>{{madLibs.celebrity}}</span> who told him to learn how to learn <span>{{madLibs.uselessskill}}</span> with Thinkful. Thinkful didnt offer a course on <span>{{madLibs.uselessskill}}</span> so {{he_she}} studied programming instead.
+			</p>
+			<p class="lead">
+				What a great decision! With {{his_her}} new skills, <span>{{madLibs.malename}}</span> built a(n) <span>{{madLibs.adjective}}</span> robot named <span>{{madLibs.obnoxiouscelebrity}}</span> that not only loved <span>{{madLibs.dirtytask}}</span> but did it <span>{{madLibs.hugenumber}}</span> faster.
+			</p>
+		</section>
+
+	</div>
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/mad-libs.js"></script>
+</body>
+</html>

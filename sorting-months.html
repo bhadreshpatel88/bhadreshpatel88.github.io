@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Sorting Months</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="sorting-months">
+
+	<h1>Sorting Months</h1>
+	
+	<hr>
+
+	<div ng-controller="myCtrl">
+		<div class="months" ng-class="{'winter': {{month.season == 'winter'}}, 'summer': {{month.season == 'summer'}}, 'spring': {{month.season == 'spring'}}, 'fall': {{month.season == 'fall'}} }" ng-repeat="month in months | orderBy: 'ordinal'">
+	    	<h1>{{month.english}}</h1>
+    		<h2>French word: {{month.french}}</h2>	
+    		<h2>Number of Days: {{month.days}}</h2>
+		</div>
+  	</div>
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/sorting-months.js"></script>
+</body>
+</html>
+

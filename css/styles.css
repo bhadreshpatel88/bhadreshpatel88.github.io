@@ -1,0 +1,32 @@
+/*===========================================
+=            General Base Styles            =
+===========================================*/
+body {
+	margin-left: 10px;
+	width: 60%;
+	margin: 20px auto;
+}
+
+
+/*======================================
+=            Sorting Months            =
+======================================*/
+.sorting-months .months { border: 5px solid #000; padding: 5px; }
+.sorting-months .winter { background-color: #fff; }
+.sorting-months .spring { background-color: green; }
+.sorting-months .summer { background-color: orange; }
+.sorting-months .fall   { background-color: brown; }
+
+
+/*=====================================
+=            Mad Libs Game            =
+=====================================*/
+.mad-libs input { margin: 10px; }
+.mad-libs img { margin-right: 50px; }
+.mad-libs span { text-decoration: underline; font-weight: bold; }
+.mad-libs header,section { border: 3px solid #000; padding: 20px;  ng-model="malename"}
+.mad-libs header { padding: 0; }
+.mad-libs .pull-left { border: 2px solid #000; }
+	
+
+
