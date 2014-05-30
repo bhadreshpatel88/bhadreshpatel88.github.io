@@ -28,5 +28,11 @@ body {
 .mad-libs header { padding: 0; }
 .mad-libs .pull-left { border: 2px solid #000; }
 	
+/*=====================================
+=            Multiplicaton            =
+=====================================*/
+.multiplication td { border:1px solid #ddd; width:50px; height:50px; text-align:center; vertical-align:middle; }
+.hover { background-color: orange; color: white; }
+
 
 
