@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Mad Libs</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="mad-libs">
+	
+	<div ng-controller="MyCtrl" class="wrapper">
+
+		<header class="clearfix">
+			<img class="pull-left" src="img/mad-lib-happy-face.png" alt="Happy Face">
+			<div class="pull-right">
+				<img src="img/ng-mad-libs-logo.png" alt="Mad Libs Logo">
+				<h1>Automate This!</h1>
+			</div>
+		</header>
+
+		<section>
+			<form class="form-inline" role="form" name="madLibForm" ng-submit="submitted = true;" ng-hide="submitted && $scope.madLibForm.$valid" ng-show="homePage" novalidate>
+				<p>
+					<input type="radio" name="gender" ng-model="gender" value="male"> Male
+					<input type="radio" name="gender" ng-model="gender" value="female"> Female
+				</p>
+
+				<hr>
+
+				<fieldset>
+					<legend>
+						<h3>Provide the following words:</h3>
+					</legend>
+
+					<div ng-show="submitted && madLibForm.$invalid" class="error">{{errorMessage}}</div>
+
+					<p class="form-input">
+						<input class="form-control" type="text" placeholder="Name" name="name" ng-model="madLibs.name" required> <br>
+					</p>
+
+					<p class="form-input">
+						<input class="form-control" type="text" placeholder="Job Title" name="jobtitle" ng-model="madLibs.jobtitle" required>
+						<br>
+					</p>
+
+					<p class="form-input">
+						<input class="form-control" type="text" placeholder="Tedious Task" name="tedioustask" ng-model="madLibs.tedioustask" required> <br>
+					</p>
+
+					<p class="form-input">
+						<input class="form-control" type="text" placeholder="Dirty Task" name="dirtytask" ng-model="madLibs.dirtytask" required> <br>
+					</p>
+
+					<p class="form-input">
+						<input class="form-control" type="text" placeholder="Celebrity" name="celebrity" ng-model="madLibs.celebrity" required> <br>
+					</p>
+
+					<p class="form-input">
+						<input class="form-control" type="text" placeholder="Useless Skill" name="uselesskill" ng-model="madLibs.uselessskill" required> <br>
+					</p>
+
+					<p class="form-input">
+						<input class="form-control" type="text" placeholder="Obnoxious Celebrity" name="Obnoxious" ng-model="madLibs.obnoxiouscelebrity" required> <br>
+					</p>
+
+					<p class="form-input">
+						<input class="form-control" type="number" placeholder="Huge Number" name="hugenumber" ng-model="madLibs.hugenumber" required> <br>
+					</p>
+
+					<p class="form-group">
+						<input class="form-control" type="text" placeholder="Adjective" name="adjective" ng-model="madLibs.adjective" required> <br>
+					</p>
+
+					<hr>
+					<button type="submit" class="btn btn-primary">Generate my Mad Lib</button>
+				</fieldset>
+			</form>
+		</section>
+
+		<section ng-if="submitted && $scope.madLibForm.$valid">
+			<p class="lead">
+				<span>{{madLibs.name}}</span> was a <span>{{madLibs.jobtitle}}</span> who loved technology. Although {{he_she}} loved parts of  job, {{he_she}} absolutely hated <span>{{madLibs.tedioustask}}</span> and <span>{{madLibs.dirtytask}}</span>. So, <span>{{madLibs.malename}}</span> met with {{his_her}} life mentor <span>{{madLibs.celebrity}}</span> who told him to learn how to learn <span>{{madLibs.uselessskill}}</span> with Thinkful. Thinkful didnt offer a course on <span>{{madLibs.uselessskill}}</span> so {{he_she}} studied programming instead.
+			</p>
+			<p class="lead">
+				What a great decision! With {{his_her}} new skills, <span>{{madLibs.malename}}</span> built a(n) <span>{{madLibs.adjective}}</span> robot named <span>{{madLibs.obnoxiouscelebrity}}</span> that not only loved <span>{{madLibs.dirtytask}}</span> but did it <span>{{madLibs.hugenumber}}</span> faster.
+			</p>
+
+			<p><button type="button" ng-click="reset()" class="btn btn-default">Start Over</button></p>
+		</section>
+
+	</div>
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/mad-libs2.js"></script>
+</body>
+</html>
