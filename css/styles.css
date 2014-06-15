@@ -5,6 +5,7 @@ body {
 	margin-left: 10px;
 	width: 60%;
 	margin: 20px auto;
+	/*background: url('../img/polonez_car.png');*/
 }
 
 
@@ -21,6 +22,8 @@ body {
 /*=====================================
 =            Mad Libs Game            =
 =====================================*/
+.mad-libs { background: url('../img/polonez_car.png'); }
+.mad-libs .wrapper { background: #fff; }
 .mad-libs input { margin: 10px; }
 .mad-libs img { margin-right: 50px; }
 .mad-libs span { text-decoration: underline; font-weight: bold; }
