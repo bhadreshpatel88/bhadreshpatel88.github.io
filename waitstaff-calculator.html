@@ -8,12 +8,12 @@
 </head>
 <body class="waitstaff-calc" ng-controller="waitStaffCtrl">
 	
-	<div class="wrapper">
+	<div class="wrapper clearfix">
 
 		<h1 class="waitstaff-h1">Waitstaff Calculator</h1>
 		
 		<div class="clearfix">
-			<div class="meal-details bg-success col-md-7 pull-left">
+			<div class="meal-details bg-success col-md-6 pull-left">
 				<h2>Enter the Meal Details</h2>
 				<hr>
 				<form class="form-horizontal" role="form" name="waitstaff" ng-submit="submit()">
@@ -62,7 +62,9 @@
 			</div> <!-- end earnings-info -->
 		</div>
 
-		<button type="reset" class="btn btn-primary" ng-click="reset()">Reset</button>
+		<div class="pull-right clearfix">
+			<button type="reset" class="btn btn-primary reset" ng-click="reset()">Reset</button>
+		</div>
 
 	</div> <!-- end wrapper -->
 	
