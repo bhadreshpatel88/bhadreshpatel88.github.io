@@ -40,30 +40,30 @@ body {
 .mad-libs .libs-wrapper { position: relative; }
 
 /* Animations */
-.page {
+.animate-page {
 	position: absolute;
 	top: 0;
 	-webkit-transition: all 1s cubic-bezier(1,.08,1,.09);
 				  transition: all 1s cubic-bezier(1,.08,1,.09);
 }
-.page.ng-hide.ng-hide-remove {
+.animate-page.ng-hide.ng-hide-remove {
 		opacity: 0;
 		-webkit-transform: rotate(80deg) translateY(5.5rem);
 		 				transform: rotate(80deg) translateY(5.5rem);
 						display:block!important;
 }
-.page.ng-hide.ng-hide-remove-active {
+.animate-page.ng-hide.ng-hide-remove-active {
 		opacity: 1;
 		-webkit-transform: rotate(10deg) translateY(0);
 						transform: rotate(10deg) translateY(0);
 }
-.page.ng-hide.ng-hide-add {
+.animate-page.ng-hide.ng-hide-add {
 		opacity: 1;
 		-webkit-transform: rotate(10deg);
 						transform: rotate(10deg);
 						display:block!important;
 }
-.page.ng-hide.ng-hide-add-active {
+.animate-page.ng-hide.ng-hide-add-active {
 		opacity: 0;
 		-webkit-transform: rotate(20deg);
 		 				transform: rotate(20deg);
