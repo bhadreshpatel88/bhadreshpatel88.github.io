@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Animation</title>
+	<style>
+		.box {
+			width:200px;
+		    height:100px;
+		    background:red;
+		    border:2px solid black;
+		    transition:0.5s linear all;
+		}
+		
+		.box:hover {
+		    background:orange;
+		    border-width:5px;
+		}
+
+		#stage {
+		  margin:40px;
+		  width:500px;
+		  height:300px;
+		  border:2px solid black;
+		  text-align:center;
+		  box-sizing:border-box;
+		  padding-top:140px;
+		}
+		.loading {
+				position:relative;
+			}
+			.loading:before {
+				background:rgba(255, 255, 255, 0.8);
+				position:absolute;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+				content:'';
+			}
+			.loading:after {
+				position:absolute;
+				width:50px;
+				height:50px;
+				top:50%;
+				left:50%;
+				margin-top:-25px;
+				margin-left:-25px;
+				content:'';
+		    	border:2px solid transparent;
+				border-top-color:maroon;
+		    	border-bottom-color:maroon;
+		    	border-radius:50px;
+				-webkit-animation: spinner 1s infinite;
+				animation: spinner 1s infinite;
+			}
+			@-webkit-keyframes spinner {
+				from { -webkit-transform: rotate(0deg); }
+				to { -webkit-transform: rotate(360deg); }
+			}
+			@keyframes spinner {
+				from { transform: rotate(0deg); }
+				to { transform: rotate(360deg); }
+			}
+
+	</style>
+</head>
+<body>
+	
+	<div class="box"></div>
+
+	<div id="stage">
+	  <button id="btn">Start Loading</button>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>
+
+		$(function() {
+		  $('#btn').click(function() {
+		    $('#stage').addClass('loading');
+		  });
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Mad Libs v3</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+
+	<body class="mad-libs" ng-controller="MyCtrl">
+
+		<header class="clearfix">
+			<img class="pull-left" src="img/mad-lib-happy-face.png" alt="Happy Face">
+			<div class="pull-right">
+				<img src="img/ng-mad-libs-logo.png" alt="Mad Libs Logo">
+				<h1>Automate This!</h1>
+			</div>
+		</header>
+
+		<div class="libs-wrapper">
+			<section class="clearfix page" ng-hide="generateMadLibs">
+
+				<div class="col-md-12">
+
+					<form class="form-inline" name="madLibForm" ng-submit="submitted=true; submit()" novalidate>
+
+						<fieldset class="row text-center">
+							Select a Gender: <br>
+							<label for="male">Male</label>
+							<input type="radio" name="gender" ng-model="madLibs.gender" value="male"/>
+							<label for="female">Female</label>
+							<input type="radio" name="gender" ng-model="madLibs.gender" value="female"><br><br>
+						</fieldset>
+
+						<fieldset class="col-md-4 text-center">
+							<p><input type="text" name="name" ng-model="madLibs.name" placeholder="Person's name" autofocus required></p>
+							<p ng-if="submitted && madLibForm.name.$error.required" class="error">Name Required</p>
+
+							<p><input type="text" name="job" ng-model="madLibs.jobTitle" placeholder="Job title" required></p>
+							<p ng-if="submitted && madLibForm.job.$error.required" class="error">Job Required</p>
+
+							<p><input type="text" name="task1" ng-model="madLibs.tediousTask" placeholder="Tedious task" required></p>
+							<p ng-if="submitted && madLibForm.task1.$error.required" class="error">Task Requird</p>
+						</fieldset>
+
+						<fieldset class="col-md-4 text-center">
+							<p><input type="text" name="task2" ng-model="madLibs.dirtyTask" placeholder="Dirty task" required></p>
+							<p ng-if="submitted && madLibForm.task2.$error.required" class="error">Dirty Task Required</p>
+
+							<p><input type="text" name="celebrity" ng-model="madLibs.celebrity" placeholder="Celebrity" required></p>
+							<p ng-if="submitted && madLibForm.celebrity.$error.required" class="error">Celebrity Required</p>
+
+							<p><input type="text" name="skill" ng-model="madLibs.uselessSkill" placeholder="Useless skill" required></p>
+							<p ng-if="submitted && madLibForm.skill.$error.required" class="error">Skill Required</p>
+						</fieldset>
+
+						<fieldset class="col-md-4 text-center">
+							<p><input type="text" name="ObnoxCeleb" ng-model="madLibs.obnoxiousCeleb" placeholder="Obnoxious Celebrity" required></p>
+							<p ng-if="submitted && madLibForm.ObnoxCeleb.$error.required" class="error">Celebrity Required</p>
+							<p><input type="number" name="number" ng-model="madLibs.hugeNumber" placeholder="Huge number" required></p>
+							<p ng-if="submitted && madLibForm.number.$error.required" class="error">Number Required</p>
+							<p><input type="text" name="adjective" ng-model="madLibs.adjective" placeholder="Adjective" required></p>
+							<p ng-if="submitted && madLibForm.adjective.$error.required" class="error">Adjective Required</p>
+						</fieldset>
+
+						<button type="submit" class="btn btn-primary pull-right my-special-animation">Submit</button>
+					</form>
+				</div>
+
+			</section>
+
+			<section class="clearfix generate-madlibs page" ng-show="generateMadLibs">
+				<div class="col-md-8 col-md-offset-2">
+					<p><span class="madlibs-results">{{madLibs.name}}</span> was a(n) <span class="madlibs-results">{{madLibs.jobTitle}}</span> who loved technology. Although <span class="madlibs-results">{{madLibs.heShe}}</span> loved parts of <span class="madlibs-results">{{madLibs.hisHer}}</span> job, <span class="madlibs-results">{{madLibs.heShe}}</span> absolutely hated  <span class="madlibs-results">{{madLibs.tediousTask}}</span> and <span class="madlibs-results">{{madLibs.dirtyTask}}</span>. So, <span class="madlibs-results">{{madLibs.name}}</span> met with <span class="madlibs-results">{{madLibs.hisHer}}</span> life mentor <span class="madlibs-results">{{madLibs.celebrity}}</span> who told <span class="madlibs-results">{{madLibs.himHer}}</span> to learn how to <span class="madlibs-results">{{madLibs.uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course to <span class="madlibs-results">{{madLibs.uselessSkill}}</span>, so <span class="madlibs-results">{{madLibs.heShe}}</span> studied programming instead.
+					</p>
+					<p>What a great decision! With <span class="madlibs-results">{{madLibs.hisHer}}</span> new skills, <span class="madlibs-results">{{madLibs.name}}</span> built a(n) <span class="madlibs-results">{{madLibs.adjective}}</span> robot named <span class="madlibs-results">{{madLibs.obnoxiousCeleb}}</span> that not only loved <span class="madlibs-results">{{madLibs.dirtyTask}}</span class="madlibs-results"> but did it <span class="madlibs-results">{{madLibs.hugeNumber}}%</span> faster.
+					</p>
+				</div>
+				<div class="col-md-8 col-md-offset-2">
+					<br>
+					<button type="button" class="btn btn-secondary pull-right" ng-click="reset()">Start Over</button>
+				</div>
+			</section>
+		</div>
+	</body>
+
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-animate.js"></script>
+	<script src="js/mad-libs3.js"></script>
+</html>

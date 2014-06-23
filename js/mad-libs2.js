@@ -2,8 +2,8 @@ angular.module('myApp', [])
 	.controller('MyCtrl', function ($scope) {
 		
 		$scope.gender = "male";
-		$scope.submitted = false;
-		$scope.homePage = false;
+		// $scope.submitted = false;
+		// $scope.homePage = false;
 
 		// $scope.madLibs = {
 		// 	name: 				'name',
@@ -31,20 +31,22 @@ angular.module('myApp', [])
 		// Submit the form.
 		// $scope.submit = function () {
 		//     if($scope.madLibForm.$valid){
-		//       $scope.submitted = true;
+		//     	$scope.submitted = true;
+		// 		$scope.homePage = true;
 		// 	}
 		// }
 
 		$scope.$watch('madLibs', function () {
-			$scope.errorMessage = $scope.madLibForm.$error.required[0].$name + ' is requied';	
-			return true;
+			if ($scope.madLibForm.$error.required.length > 0) {
+				$scope.errorMessage = $scope.madLibForm.$error.required[0].$name + ' is requied';	
+			}
 		}, true);
 
 
 		// Reset the form
 		$scope.reset = function () {
-			$scope.homePage = true;
-			$scope.submitted = false;
+			// $scope.homePage = false;
+			// $scope.submitted = false;
 			$scope.madLibs = '';
 		}
 	});
