@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Instagram Searcher</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body ng-controller="instaGramCtrl" class="instagram-search">
+
+    <div class="search">
+
+      <h1><img src="../img/ng-instagram.png" alt="Search Instagram"></h1>
+
+      <br>
+
+      <form name="instagramForm" ng-submit='search(searchGram)' novalidate>
+        <input type="text" placeholder="Search Instagram" autofocus ng-model="searchGram" required>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <p class="msg" ng-if="submitted && results.length">
+        We found {{results.length}} for "{{query}}"
+      </p>
+      <p class="nop" ng-if="submitted && !results.length">Nop, I couldn't find any ...</p>
+
+    </div>
+
+    <ul class="result">
+      <li class="insta-img" ng-if="submitted" ng-repeat="img in results">
+        <a href="{{img.link}}">
+          <img ng-src="{{img.images.low_resolution.url}}">
+        </a>
+      </li>
+    </ul>
+
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <script src="js/instagram-app.js"></script>
+
+  </body>
+
+</html>

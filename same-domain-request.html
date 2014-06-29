@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="SameDomainDemo">
+<head>
+    <meta charset="UTF-8">
+    <title>Thinkful | Learn AngularJS | Same Domain Demo</title>
+</head>
+<body>
+    <div ng-controller="MyController">
+        <button ng-click="getJSONData()">Demo It!</button>
+        <h1>Results</h1>
+        <div class="box" ng-repeat="color in colors">
+            <p>Color: {{ color.name }}</p>
+            <p>RGB Value: {{ color.value }}</p>
+        </div>
+    </div>
+
+
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/same-domain-request.js"></script>
+</body>
+</html>

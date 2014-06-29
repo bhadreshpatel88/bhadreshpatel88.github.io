@@ -12,7 +12,7 @@ body {
 /*======================================
 =            Sorting Months            =
 ======================================*/
-.sorting-months { background: url('../img/subtle_grunge.png'); } 
+.sorting-months { background: url('../img/subtle_grunge.png'); }
 .sorting-months .months { border: 5px solid #000; padding: 5px; }
 .sorting-months .winter { background-color: #fff; }
 .sorting-months .spring { background-color: green; }
@@ -34,7 +34,7 @@ body {
 .mad-libs .form-input { display: inline-block; }
 .mad-libs .error { color: #fff; padding: 5px; margin: 10px; background-color: red; text-decoration: none; border: 1px solid #000; }
 .mad-libs .logo { width: 40%; }
-.mad-libs .smiley { padding: 5px; max-height: 90%; max-width: 90%; width: auto; display: inline-block; vertical-align: middle; } 
+.mad-libs .smiley { padding: 5px; max-height: 90%; max-width: 90%; width: auto; display: inline-block; vertical-align: middle; }
 .mad-libs .madlibs-results { background-color: gray; color: white; padding: 4px; border-radius: 3px; text-decoration: none; }
 .mad-libs .generate-madlibs { line-height: 35px; }
 .mad-libs .libs-wrapper { position: relative; }
@@ -86,6 +86,54 @@ body {
 .waitstaff-calc .col-md-4 { width: 45%; }
 .waitstaff-calc h2 { font-size: 25px; color: cornflowerblue; margin-top: 0; text-align: center; text-decoration: underline; background-color: cornsilk; padding: 5px; }
 .waitstaff-calc .reset { margin: 10px 13px 20px 0; }
+
+/*======================================
+=            Instagram App             =
+======================================*/
+.instagram-search .search{ margin:0; padding: 0; text-align: center; margin-top:50px; }
+.instagram-search .result{ margin:0; text-align: center; padding: 20px; margin-bottom: 50px; }
+.instagram-search .insta-img { list-style-type: none; }
+
+
+.instagram-search .insta-img.ng-enter {
+  -webkit-animation: enter_animation 0.5s;
+  animation: enter_animation 0.5s;
+  opacity:0;
+}
+.instagram-search .insta-img.ng-leave {
+  -webkit-animation: leave_animation 0.5s;
+  animation: leave_animation 0.5s;
+}
+.instagram-search .insta-img.ng-enter-stagger,
+.instagram-search .insta-img.ng-leave-stagger,
+.instagram-search .insta-img.ng-move-stagger {
+  -webkit-animation-delay:0.10s;
+  animation-delay:0.10s;
+
+  -webkit-animation-duration:0;
+  animation-duration:0;
+}
+
+@-webkit-keyframes enter_animation {
+  from { opacity:0; }
+  to { opacity:2; }
+}
+
+@keyframes enter_animation {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+@-webkit-keyframes leave_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+@keyframes leave_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
 
 
 
