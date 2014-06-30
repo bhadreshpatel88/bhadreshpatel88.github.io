@@ -31,7 +31,7 @@ angular.module('myApp', ['ngAnimate'])
         $scope.results = [];
         $scope.submitted = true;
         $scope.searchGram = '';
-        $scope.query = $scope.searchGram;
+        $scope.query = $scope.keyword;
       }
 
     }

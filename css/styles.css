@@ -93,45 +93,39 @@ body {
 .instagram-search .search{ margin:0; padding: 0; text-align: center; margin-top:50px; }
 .instagram-search .result{ margin:0; text-align: center; padding: 20px; margin-bottom: 50px; }
 .instagram-search .insta-img { list-style-type: none; }
-
-
-.instagram-search .insta-img.ng-enter {
-  -webkit-animation: enter_animation 0.5s;
-  animation: enter_animation 0.5s;
-  opacity:0;
+.result.ng-enter {
+  -webkit-transition: max-height 0.5s ease-in;
+  -moz-transition: max-height 0.5s ease-in;
+  -o-transition: max-height 0.5s ease-in;
+  transition: max-height 0.5s ease-in;
 }
-.instagram-search .insta-img.ng-leave {
-  -webkit-animation: leave_animation 0.5s;
-  animation: leave_animation 0.5s;
+.result.ng-leave {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
-.instagram-search .insta-img.ng-enter-stagger,
-.instagram-search .insta-img.ng-leave-stagger,
-.instagram-search .insta-img.ng-move-stagger {
-  -webkit-animation-delay:0.10s;
-  animation-delay:0.10s;
-
-  -webkit-animation-duration:0;
-  animation-duration:0;
+.result.ng-leave {
+  opacity: 1;
 }
-
-@-webkit-keyframes enter_animation {
-  from { opacity:0; }
-  to { opacity:2; }
+.result.ng-leave-active {
+  opacity: 0;
 }
-
-@keyframes enter_animation {
-  from { opacity:0; }
-  to { opacity:1; }
+.result.ng-enter {
+  opacity: 0;
+  max-height: 0;
 }
-
-@-webkit-keyframes leave_animation {
-  from { opacity:1; }
-  to { opacity:0; }
+.result.ng-enter-active {
+  opacity: 1;
+  max-height: 1000px;
 }
-
-@keyframes leave_animation {
-  from { opacity:1; }
-  to { opacity:0; }
+.result.ng-leave {
+  opacity: 1;
+  max-height: 1000px;
+}
+.result.ng-leave-active {
+  opacity: 0;
+  max-height: 0;
 }
 
 
