@@ -12,19 +12,22 @@
 
     <div class="search">
 
-      <h1><img src="../img/ng-instagram.png" alt="Search Instagram"></h1>
+      <h1><img src="./img/ng-instagram.png" alt="Search Instagram"></h1>
 
       <br>
 
-      <form name="instagramForm" ng-submit='search(keyword)' novalidate>
+      <form name="instagramForm" ng-submit='search(keyword)'>
+
         <input type="text" placeholder="Search Instagram" autofocus ng-model="keyword" required>
+
         <button type="submit" class="btn btn-primary">Submit</button>
+
       </form>
 
-      <p class="msg" ng-if="submitted && results.length">
-        We found {{results.length}} for "{{query}}"
+      <p ng-if="submitted && results.length">
+        We found {{results.length}} results for "{{query}}"
       </p>
-      <p class="nop" ng-if="submitted && !results.length">Sorry, couldn't find any results</p>
+      <p ng-if="submitted && !results.length">Sorry, couldn't find any results</p>
 
       <ul class="result">
         <li class="insta-img" ng-if="submitted" ng-repeat="img in results">
