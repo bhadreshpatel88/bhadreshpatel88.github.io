@@ -1,0 +1,14 @@
+{
+  "name": "open-weather-map",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bhadreshpatel88/bhadreshpatel88.github.io",
+  "authors": [
+    "pb601540 <bpatel845@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.2.19",
+    "angular-route": "~1.2.19"
+  }
+}
