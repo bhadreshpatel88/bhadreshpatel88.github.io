@@ -1,6 +1,4 @@
-angular.module('myApp', ['ngRoute'])
-
-	.config(function($routeProvider){
+	app.config(function($routeProvider){
 	    $routeProvider.when('/', {
 	        templateUrl: './home.html'
 	    })
@@ -15,52 +13,28 @@ angular.module('myApp', ['ngRoute'])
 	    .otherwise({
 	    	redirectTo : '/'
 	    });
-	})
+	});
 
-	.controller('navCtrl', function($scope, $location) {
+	app.controller('navCtrl', function($scope, $location) {
 		$scope.isActive = function (path) {
 			return path === $location.path();
 		}
-	})
+	});
 
-	.controller('newMealCtrl', function($scope) {
-
-		// Setting Initial Value
-		var initValue = function () {
-			$scope.data = {
-				charge: {
-					subTotal: 0,
-					tip: 0,
-					total: 0
-				},
-				earnings: {
-					tipTotal: 0,
-					mealCount: 0,
-					avgTip: 0
-				}
-			}
-		};
-
-		initValue();
-
+	app.controller('newMealCtrl', function($scope, wsTipTotal) {
+		$scope.wsService = wsTipTotal;
 		// Calculate meal details
 		$scope.submit = function() {
 		    if($scope.waitstaff.$valid) {
-		    	// Calculate meal charges
-		    	$scope.data.charge.subTotal = $scope.data.price + $scope.data.price * $scope.data.rate / 100;
-		    	$scope.data.charge.tip = $scope.data.charge.subTotal * $scope.data.tip / 100;
-		    	$scope.data.charge.total = $scope.data.charge.subTotal + $scope.data.charge.tip;
-		    	// Calculate my earnings
-		    	$scope.data.earnings.tipTotal+= $scope.data.tip;
-		    	$scope.data.earnings.mealCount++;
-		    	$scope.data.earnings.avgTip = $scope.data.earnings.tipTotal / $scope.data.earnings.mealCount;
+		    	$scope.wsService.allCalc($scope.data);
 		    }
-		}
-	})
+		};
+	});
 
-	.controller('myEarningsCrtl', function($scope) {
+	app.controller('myEarningsCrtl', function($scope, wsTipTotal) {
+		$scope.wsService = wsTipTotal;
 		// Reset the form
 		$scope.reset = function() {
-			initValue();
+			$scope.wsService.reset();
 		}
-	})
+	});
