@@ -1,0 +1,135 @@
+/*===========================================
+=            General Base Styles            =
+===========================================*/
+body {
+	margin-left: 10px;
+	width: 60%;
+	margin: 20px auto;
+	/*background: url('../img/polonez_car.png');*/
+}
+
+
+/*======================================
+=            Sorting Months            =
+======================================*/
+.sorting-months { background: url('../img/subtle_grunge.png'); }
+.sorting-months .months { border: 5px solid #000; padding: 5px; }
+.sorting-months .winter { background-color: #fff; }
+.sorting-months .spring { background-color: green; }
+.sorting-months .summer { background-color: orange; }
+.sorting-months .fall   { background-color: brown; }
+
+
+/*=====================================
+=            Mad Libs Game            =
+=====================================*/
+.mad-libs { background: url('../img/subtle_grunge.png'); }
+.mad-libs .wrapper { background: #fff; }
+.mad-libs input { margin: 10px; }
+.mad-libs img { margin-right: 50px; }
+.mad-libs span { text-decoration: underline; font-weight: bold; }
+.mad-libs header,section { border: 3px solid #000; padding: 20px; }
+.mad-libs header { padding: 0; }
+.mad-libs .pull-left { border: 2px solid #000; }
+.mad-libs .form-input { display: inline-block; }
+.mad-libs .error { color: #fff; padding: 5px; margin: 10px; background-color: red; text-decoration: none; border: 1px solid #000; }
+.mad-libs .logo { width: 40%; }
+.mad-libs .smiley { padding: 5px; max-height: 90%; max-width: 90%; width: auto; display: inline-block; vertical-align: middle; }
+.mad-libs .madlibs-results { background-color: gray; color: white; padding: 4px; border-radius: 3px; text-decoration: none; }
+.mad-libs .generate-madlibs { line-height: 35px; }
+.mad-libs .libs-wrapper { position: relative; }
+.mad-libs .animate-page { width: 840px; }
+
+/* Animations */
+.animate-page {
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 1s cubic-bezier(1,.08,1,.09);
+	transition: all 1s cubic-bezier(1,.08,1,.09);
+}
+.animate-page.ng-hide.ng-hide-remove {
+	opacity: 0;
+	-webkit-transform: rotate(80deg) translateY(5.5rem);
+	transform: rotate(80deg) translateY(5.5rem);
+	display:block!important;
+}
+.animate-page.ng-hide.ng-hide-remove-active {
+	opacity: 1;
+	-webkit-transform: rotate(10deg) translateY(0);
+	transform: rotate(10deg) translateY(0);
+}
+.animate-page.ng-hide.ng-hide-add {
+	opacity: 1;
+	-webkit-transform: rotate(10deg);
+	transform: rotate(10deg);
+	display:block!important;
+}
+.animate-page.ng-hide.ng-hide-add-active {
+	opacity: 0;
+	-webkit-transform: rotate(20deg);
+	transform: rotate(20deg);
+}
+
+/*=====================================
+=            Multiplicaton            =
+=====================================*/
+.multiplication td { border:1px solid #ddd; width:50px; height:50px; text-align:center; vertical-align:middle; }
+.multiplication .hover { background-color: orange; color: white; }
+
+/*============================================
+=            Waitstaff Calculator            =
+============================================*/
+.waitstaff-calc { background: url('../img/congruent_outline.png'); }
+.waitstaff-calc .wrapper { border: 5px solid #aaa; border-radius: 5px; background: url('../img/polonez_car.png');}
+.waitstaff-calc .meal-details, .waitstaff-calc .customer-charges, .waitstaff-calc .earnings-info { padding: 12px; border: 5px solid #333; margin: 10px; }
+.waitstaff-calc .waitstaff-h1 { background-color: lightblue; margin: 0; padding: 10px; text-align: center; border-bottom: 5px solid green; }
+.waitstaff-calc .col-md-4 { width: 45%; }
+.waitstaff-calc h2 { font-size: 25px; color: cornflowerblue; margin-top: 0; text-align: center; text-decoration: underline; background-color: cornsilk; padding: 5px; }
+.waitstaff-calc .reset { margin: 10px 13px 20px 0; }
+
+/*======================================
+=            Instagram App             =
+======================================*/
+.instagram-search .search{ margin:0; padding: 0; text-align: center; margin-top:50px; }
+.instagram-search .result{ margin:0; text-align: center; padding: 20px; margin-bottom: 50px; }
+.instagram-search .insta-img { list-style-type: none; }
+.result.ng-enter {
+  -webkit-transition: max-height 0.5s ease-in;
+  -moz-transition: max-height 0.5s ease-in;
+  -o-transition: max-height 0.5s ease-in;
+  transition: max-height 0.5s ease-in;
+}
+.result.ng-leave {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.result.ng-leave {
+  opacity: 1;
+}
+.result.ng-leave-active {
+  opacity: 0;
+}
+.result.ng-enter {
+  opacity: 0;
+  max-height: 0;
+}
+.result.ng-enter-active {
+  opacity: 1;
+  max-height: 1000px;
+}
+.result.ng-leave {
+  opacity: 1;
+  max-height: 1000px;
+}
+.result.ng-leave-active {
+  opacity: 0;
+  max-height: 0;
+}
+
+
+
+
+
+

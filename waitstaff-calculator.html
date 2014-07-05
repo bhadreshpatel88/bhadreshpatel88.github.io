@@ -7,11 +7,11 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="waitstaff-calc" ng-controller="waitStaffCtrl">
-	
+
 	<div class="wrapper clearfix">
 
 		<h1 class="waitstaff-h1">Waitstaff Calculator</h1>
-		
+
 		<div class="clearfix">
 			<div class="meal-details bg-success col-md-6 pull-left">
 				<h2>Enter the Meal Details</h2>
@@ -43,7 +43,7 @@
 				  </div>
 				</form>
 			</div> <!-- end meal-details -->
-			
+
 			<div class="customer-charges bg-warning col-md-4 pull-left">
 				<h2>Customer Charges</h2>
 				<hr>
@@ -52,7 +52,7 @@
 				<hr>
 				<p>Total: <span>{{data.charge.total | currency}}</span></p>
 			</div> <!-- end customer-charges -->
-			
+
 			<div class="earnings-info bg-info col-md-4 pull-left">
 				<h2>My Earnings Info</h2>
 				<hr>
@@ -67,7 +67,7 @@
 		</div>
 
 	</div> <!-- end wrapper -->
-	
+
 	<script src="js/angular.min.js"></script>
 	<script src="js/waitstaff-calc.js"></script>
 </body>

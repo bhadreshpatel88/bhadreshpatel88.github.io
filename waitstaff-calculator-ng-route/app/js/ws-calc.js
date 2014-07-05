@@ -1,5 +1,23 @@
-angular.module('myApp', [])
-	.controller('waitStaffCtrl', function($rootScope, $scope){
+angular.module('myApp', ['ngRoute'])
+
+	.config(function($routeProvider){
+	    $routeProvider.when('/', {
+	        templateUrl: './home.html'
+	    })
+	    .when('/new-meal', {
+	        templateUrl : './new-meal.html',
+	        controller : 'newMealCtrl',
+	    })
+	    .when('/my-earnings', {
+	        templateUrl : './my-earnings.html',
+	        controller : 'myEarningsCrtl'
+	    })
+	    .otherwise({
+	    	redirectTo : '/'
+	    });
+	})
+
+	.controller('newMealCtrl', function($scope) {
 
 		// Setting Initial Value
 		var initValue = function () {
@@ -32,9 +50,11 @@ angular.module('myApp', [])
 		    	$scope.data.earnings.avgTip = $scope.data.earnings.tipTotal / $scope.data.earnings.mealCount;
 		    }
 		}
+	})
 
+	.controller('myEarningsCrtl', function($scope) {
 		// Reset the form
 		$scope.reset = function() {
 			initValue();
 		}
-	});
+	})
