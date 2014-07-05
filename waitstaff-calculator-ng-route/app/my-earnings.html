@@ -1,13 +1,13 @@
 <div ng-controller="myEarningsCrtl">
-	<div class="earnings-info bg-info col-md-4 pull-left">
+	<div class="jumbotron">
 		<h2>My Earnings Info</h2>
 		<hr>
 		<p>Tip Total: <span>{{data.earnings.tipTotal | currency}}</span></p>
 		<p>Meal Count: <span>{{data.earnings.mealCount}}</span></p>
 		<p>Average Tip Per Meal: <span>{{data.earnings.avgTip | currency}}</span></p>
-	</div> <!-- end earnings-info -->
 
-	<div class="pull-right clearfix">
+		<br>
+
 		<button type="reset" class="btn btn-primary reset" ng-click="reset()">Reset</button>
-	</div>
+	</div> <!-- end earnings-info -->
 </div>

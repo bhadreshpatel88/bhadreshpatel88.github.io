@@ -86,6 +86,11 @@ body {
 .waitstaff-calc .col-md-4 { width: 45%; }
 .waitstaff-calc h2 { font-size: 25px; color: cornflowerblue; margin-top: 0; text-align: center; text-decoration: underline; background-color: cornsilk; padding: 5px; }
 .waitstaff-calc .reset { margin: 10px 13px 20px 0; }
+/* -- waitstaff calc with ngRoute -- */
+.ws-calc { background: url('../img/congruent_outline.png'); }
+.ws-calc .control-label { text-align: left; }
+.ws-calc .ws-calc-info { color: #fff; }
+.ws-calc .text-muted { color: #fff; font-size: 35px; }
 
 /*======================================
 =            Instagram App             =

@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body class="ws-calc">
 
 	<br>
 
-	<div class="header">
+	<div class="header" ng-controller="navCtrl">
 		<ul class="nav nav-pills pull-right">
-			<li class="active"><a href="#/">Home</a></li>
-			<li><a href="#/new-meal">New Meal</a></li>
-			<li><a href="#/my-earnings">My Earnings</a></li>
+			<li ng-class="{ active: isActive('/')}"><a href="#/">Home</a></li>
+			<li ng-class="{ active: isActive('/new-meal')}"><a href="#/new-meal">New Meal</a></li>
+			<li ng-class="{ active: isActive('/my-earnings')}"><a href="#/my-earnings">My Earnings</a></li>
 		</ul>
 		<h3 class="text-muted">WaitStaff Calculator</h3>
 	</div>

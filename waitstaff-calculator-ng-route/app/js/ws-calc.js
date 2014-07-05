@@ -17,6 +17,12 @@ angular.module('myApp', ['ngRoute'])
 	    });
 	})
 
+	.controller('navCtrl', function($scope, $location) {
+		$scope.isActive = function (path) {
+			return path === $location.path();
+		}
+	})
+
 	.controller('newMealCtrl', function($scope) {
 
 		// Setting Initial Value
