@@ -26,7 +26,19 @@ app.factory('wsTipTotal', function(){
     };
 
     wsTipTotal.reset = function(){
-      return wsTipTotal.data = {};
+      return wsTipTotal.data = {
+        price:    0,
+        tax:      0,
+        tip:      0,
+
+        subTotal: 0,
+        tipCalc:  0,
+        totalCalc:0,
+
+        tipTotal: 0,
+        mealCount:0,
+        avgTip:   0
+      }
     };
 
     return wsTipTotal;
