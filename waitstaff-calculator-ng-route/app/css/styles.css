@@ -92,6 +92,23 @@ body {
 .ws-calc .ws-calc-info { color: #fff; }
 .ws-calc .text-muted { color: #fff; font-size: 35px; }
 
+/* Animations */
+.ws-calc .ws-view-contailer { position:relative; min-height: 100%;}
+.ws-calc .ws-view.ng-enter,
+.ws-calc .ws-view.ng-leave {
+        transition:1s linear all;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:#eee;
+}
+.ws-calc .ws-view.ng-enter { opacity:0; z-index:100; }
+.ws-calc .ws-view.ng-enter.ng-enter-active { opacity:1; }
+.ws-calc .ws-view.ng-leave { opacity:1; z-index:99; }
+.ws-calc .ws-view.ng-leave.ng-leave-active { opacity:0; }
+
 /*======================================
 =            Instagram App             =
 ======================================*/
