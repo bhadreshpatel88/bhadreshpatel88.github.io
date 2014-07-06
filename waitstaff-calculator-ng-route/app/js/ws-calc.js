@@ -26,7 +26,7 @@
 		// Calculate meal details
 		$scope.submit = function() {
 		    if($scope.waitstaff.$valid) {
-		    	$scope.wsService.allCalc($scope.data);
+		    	$scope.wsService.doCalc($scope.data);
 		    }
 		};
 	});

@@ -91,6 +91,8 @@ body {
 .ws-calc .control-label { text-align: left; }
 .ws-calc .ws-calc-info { color: #fff; }
 .ws-calc .text-muted { color: #fff; font-size: 35px; }
+.ws-calc .jumbotron { border-radius: .5em; border: 3px solid green; }
+
 
 /* Animations */
 .ws-calc .ws-view-contailer { position:relative; min-height: 100%;}
