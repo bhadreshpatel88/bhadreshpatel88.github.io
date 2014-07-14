@@ -1,5 +1,5 @@
 <div class="loading-container" ng-if='loading === true'>
-  <div class='loading'>LOADING...</div>
+  <div class='loading'></div>
 </div>
 
 <div class='row'>
@@ -21,14 +21,15 @@
       </ul>
       <hr>
       <div class='row'>
-        <img class='image' ng-src="http://www.geonames.org/img/country/250/{{id}}.png" />
-        <img class='image' ng-src="http://www.geonames.org/flags/x/{{mapId}}.gif" />
+        <img class='image' ng-src="http://www.geonames.org/img/country/250/{{countryId}}.png" />
+        <img class='image' ng-src="http://www.geonames.org/flags/x/{{mapcountryId}}.gif" />
       </div>
       <br><hr><br>
       <div>
         <a class="btn btn-primary" href='#/'>Home</a>
         <a class="btn btn-primary" href='#/countries'>Countries</a>
       </div>
+      <br><br>
     </div>
   </div>
 

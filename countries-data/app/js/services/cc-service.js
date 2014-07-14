@@ -28,8 +28,8 @@ angular.module('cc-service', [])
           .success(function (data) {
             if (data.totalResultsCount > 0) {
               var countryIds = [];
-              for (var n = 0; n < data.geonames.length; n++) {
-                countryIds.push(data.geonames[n].countryCode);
+              for (var i = 0; i < data.geonames.length; i++) {
+                countryIds.push(data.geonames[i].countryCode);
               };
               defer.resolve(countryIds);
             };

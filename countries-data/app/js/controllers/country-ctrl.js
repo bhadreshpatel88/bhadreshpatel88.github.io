@@ -3,31 +3,33 @@ myApp.controller('countryCtrl', ['CapitalData', 'CountryData', 'Neighbors', 'Nei
 
   function (CapitalData, CountryData, Neighbors, NeighborData, $routeParams, $scope, $timeout) {
 
-    var id = $routeParams.id;
+    var countryId = $routeParams.id;
     var capital = $routeParams.city;
     $scope.city = $routeParams.city;
-    $scope.id = $routeParams.id;
-    $scope.mapId = $routeParams.id.toLowerCase();
+    $scope.countryId = $routeParams.id;
+    $scope.mapcountryId = $routeParams.id.toLowerCase();
     $scope.loading = true;
 
     $timeout(function() {
         // Countries neighbors.
-      Neighbors(id).then(function (data) {
+      Neighbors(countryId).then(function (data) {
         NeighborData(data).then(function (neighbors) {
           $scope.neighbors = neighbors;
         });
       });
 
       // Capital Data.
-      CapitalData(id, capital).then(function (data) {
+      CapitalData(countryId, capital).then(function (data) {
         $scope.capital = data;
-        $scope.loading = false;
       });
 
       // Country Data.
-      CountryData(id).then(function (data) {
+      CountryData(countryId).then(function (data) {
         $scope.country = data;
       });
+
+      // Set loading to false.
+      $scope.loading = false;
     }, 1000);
   }
 ]);

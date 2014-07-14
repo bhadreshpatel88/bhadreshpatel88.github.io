@@ -11,7 +11,7 @@ myApp.controller('countriesCtrl', ['Countries', '$location', '$scope', '$timeout
       $timeout(function() {
         $scope.countries = data.geonames;
         $scope.loading = false;
-      }, 1000);
+      }, 100);
     });
 
     // GO to selected country
