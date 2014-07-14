@@ -1,0 +1,35 @@
+<div class="loading-container" ng-if='loading === true'>
+  <div class='loading'>LOADING...</div>
+</div>
+
+<div class='row'>
+  <div class='col-md-6 col-md-offset-3'>
+    <div ng-if='capital'>
+	    <h2>{{capital.countryName}}</h2>
+	    <ul>
+        <li>Population of Country: {{country.population | number}}</li>
+        <li>Area: {{country.areaInSqKm | number:0}} sq km</li>
+        <li>Capital: {{capital.toponymName}}</li>
+        <li>Capital Population: {{capital.population}}</li>
+    	</ul>
+      <ul>
+        <span>Neighbors:</span>
+        <li ng-repeat='neighbor in neighbors'>
+          <a ng-href='#/countries/{{neighbor.countryCode}}/{{neighbor.capital}}'>
+             {{neighbor.countryName}}</a>
+        </li>
+      </ul>
+      <hr>
+      <div class='row'>
+        <img class='image' ng-src="http://www.geonames.org/img/country/250/{{id}}.png" />
+        <img class='image' ng-src="http://www.geonames.org/flags/x/{{mapId}}.gif" />
+      </div>
+      <br><hr><br>
+      <div>
+        <a class="btn btn-primary" href='#/'>Home</a>
+        <a class="btn btn-primary" href='#/countries'>Countries</a>
+      </div>
+    </div>
+  </div>
+
+</div>

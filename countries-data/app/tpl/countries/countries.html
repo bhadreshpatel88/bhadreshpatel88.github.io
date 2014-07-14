@@ -1,0 +1,27 @@
+<div class="loading-container" ng-if='loading === true'>
+  <div class='loading'>LOADING...</div>
+</div>
+<div ng-if='countries'>
+  <div class='scroll'>
+    <table class='table table-bordered table-striped'>
+      <tr>
+        <th>Name</th>
+        <th>Country Code</th>
+        <th>Capital</th>
+        <th>Area in km2</th>
+        <th>Population</th>
+        <th>Continent</th>
+      </tr>
+      <tr ng-repeat='country in countries' ng-click='goToCountry(country.countryCode, country.capital)'>
+        <td><a href="">{{country.countryName}}</a></td>
+        <td><a href="">{{country.countryCode}}</a></td>
+        <td><a href="">{{country.capital}}</a></td>
+        <td><a href="">{{country.areaInSqKm | number:0}}</a></td>
+        <td><a href="">{{country.population | number}}</a></td>
+        <td><a href="">{{country.continent}}</a></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <a class="btn btn-primary" href='#/'>Home</a>
+</div>
