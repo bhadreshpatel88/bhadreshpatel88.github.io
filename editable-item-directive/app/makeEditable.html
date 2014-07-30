@@ -1,0 +1,7 @@
+<div>
+    <div contenteditable="{{ editable }}"><p ng-transclude></p></div>
+    <button type="button" class="btn btn-primary" ng-click="edit.editText()" ng-if='showEdit'>Edit</button>
+    <button type="button" class="btn btn-success" ng-click="edit.saveText()" ng-if='showSave'>Save</button>
+</div>
+
+

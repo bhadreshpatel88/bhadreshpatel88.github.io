@@ -1,0 +1,20 @@
+{
+  "name": "editable-item-directive",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bhadreshpatel88/bhadreshpatel88.github.io",
+  "authors": [
+    "pb601540 <bpatel845@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.21"
+  }
+}
