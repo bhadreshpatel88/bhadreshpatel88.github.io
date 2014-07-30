@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Directive Demo</title>
+</head>
+<body>
+	
+	<h1 class="yo-yo"></h1>
+	<!-- <yo-yo></yo-yo> -->
+
+	<script src="js/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+			app.directive('yoYo', function () {
+				return {
+					restrict: 'A',
+					template: ''
+				};
+			});
+	</script>
+</body>
+</html>
